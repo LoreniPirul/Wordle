@@ -22,9 +22,13 @@
                                 <color key="textColor" red="0.30752129413682922" green="0.29915396848754239" blue="0.72131752169009333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="ny3-cy-crl">
+                                <rect key="frame" x="70" y="200" width="275" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.098522068298969034" green="0.098522068298969034" blue="0.098522068298969034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="First page" id="dnG-OP-2dx">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="gearshape" catalog="system" id="0y0-PB-nJt">
@@ -56,6 +60,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="download" width="273" height="154"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
     </resources>
 </document>
