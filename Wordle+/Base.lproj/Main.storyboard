@@ -51,6 +51,9 @@
                                 <color key="backgroundColor" red="0.34432328490000003" green="0.074954792229999997" blue="0.53602206829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="PLAY"/>
+                                <connections>
+                                    <segue destination="RA5-em-dei" kind="show" id="M4P-l8-Yb7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-RV-SWX">
                                 <rect key="frame" x="89" y="419" width="255" height="58"/>
@@ -450,10 +453,11 @@
                         <viewLayoutGuide key="safeArea" id="SDV-6e-fbL"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="iSO-RQ-YdQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agh-MW-Q2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1802.8985507246377" y="82.366071428571431"/>
+            <point key="canvasLocation" x="1801" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IcB-9F-OXb">
