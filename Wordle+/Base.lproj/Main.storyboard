@@ -86,7 +86,7 @@
         <!--View Controller-->
         <scene sceneID="I8L-Cf-qMz">
             <objects>
-                <viewController id="RA5-em-dei" sceneMemberID="viewController">
+                <viewController id="RA5-em-dei" customClass="ViewController" customModule="Wordle_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IjB-7f-MUO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +95,10 @@
                                 <rect key="frame" x="28" y="671" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Q"/>
+                                <connections>
+                                    <action selector="letterButtonPressed:" destination="RA5-em-dei" eventType="touchUpInside" id="2qy-TQ-gJd"/>
+                                    <action selector="letterButtons:" destination="Y3e-Lc-ODU" eventType="touchUpInside" id="X6e-zu-33S"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPp-wL-UWy">
                                 <rect key="frame" x="66" y="671" width="30" height="30"/>
@@ -236,7 +240,7 @@
                                 <rect key="frame" x="99" y="125" width="211" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.26635262370109558" green="0.039994359016418457" blue="0.97238188982009888" alpha="0.75326849490000003" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="o" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gms-9M-yEa">
@@ -479,20 +483,52 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bisexual flag " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCg-l1-QDm">
-                                <rect key="frame" x="298" y="603" width="100" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SDV-6e-fbL"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="iSO-RQ-YdQ"/>
+                    <connections>
+                        <outlet property="letterLabel1" destination="gms-9M-yEa" id="XAl-c9-Xlt"/>
+                        <outlet property="letterLabel2" destination="C68-DD-L49" id="1hy-2r-I6u"/>
+                        <outlet property="letterLabel3" destination="sHS-PF-Zll" id="PLp-LX-7pN"/>
+                        <outlet property="letterLabel4" destination="I2j-Gd-K56" id="D19-4r-29s"/>
+                        <outlet property="letterLabel5" destination="Jxd-ht-1uW" id="ulG-S6-bKB"/>
+                        <outletCollection property="letterButtons" destination="sfV-JH-h09" collectionClass="NSMutableArray" id="dfH-qi-Lyk"/>
+                        <outletCollection property="letterButtons" destination="XPp-wL-UWy" collectionClass="NSMutableArray" id="SRD-97-DCu"/>
+                        <outletCollection property="letterButtons" destination="ZdF-KF-lby" collectionClass="NSMutableArray" id="wXa-xa-C7L"/>
+                        <outletCollection property="letterButtons" destination="s0b-Au-sgn" collectionClass="NSMutableArray" id="YEq-11-535"/>
+                        <outletCollection property="letterButtons" destination="l3P-TX-trY" collectionClass="NSMutableArray" id="Bth-lz-JFv"/>
+                        <outletCollection property="letterButtons" destination="Kr0-0U-Ish" collectionClass="NSMutableArray" id="fyl-fU-j1v"/>
+                        <outletCollection property="letterButtons" destination="7Mg-ed-uKY" collectionClass="NSMutableArray" id="2rJ-lm-0gY"/>
+                        <outletCollection property="letterButtons" destination="WDi-Ux-tc0" collectionClass="NSMutableArray" id="pfD-wo-AMT"/>
+                        <outletCollection property="letterButtons" destination="otf-RY-UDr" collectionClass="NSMutableArray" id="p3T-k5-vld"/>
+                        <outletCollection property="letterButtons" destination="89Q-s5-sfc" collectionClass="NSMutableArray" id="uv4-LE-fhH"/>
+                        <outletCollection property="letterButtons" destination="FjY-cR-lck" collectionClass="NSMutableArray" id="NJg-5I-MP5"/>
+                        <outletCollection property="letterButtons" destination="NTb-M7-VVb" collectionClass="NSMutableArray" id="Opq-db-Roc"/>
+                        <outletCollection property="letterButtons" destination="e6f-mQ-ooS" collectionClass="NSMutableArray" id="gzb-7O-FBi"/>
+                        <outletCollection property="letterButtons" destination="HLh-XM-UIU" collectionClass="NSMutableArray" id="c68-BV-xaV"/>
+                        <outletCollection property="letterButtons" destination="WQn-bi-pR8" collectionClass="NSMutableArray" id="eaX-oW-0tH"/>
+                        <outletCollection property="letterButtons" destination="Pdf-9Y-ieg" collectionClass="NSMutableArray" id="HYU-hT-Km4"/>
+                        <outletCollection property="letterButtons" destination="4sO-Nj-rC0" collectionClass="NSMutableArray" id="fnQ-UB-f9b"/>
+                        <outletCollection property="letterButtons" destination="wRS-Su-tIM" collectionClass="NSMutableArray" id="V7x-pc-hpN"/>
+                        <outletCollection property="letterButtons" destination="Jx4-ne-Hka" collectionClass="NSMutableArray" id="ftK-Fd-1Hf"/>
+                        <outletCollection property="letterButtons" destination="xf1-FQ-HoW" collectionClass="NSMutableArray" id="ye7-0Q-xVP"/>
+                        <outletCollection property="letterButtons" destination="kNX-K4-9gE" collectionClass="NSMutableArray" id="cMD-bq-pLj"/>
+                        <outletCollection property="letterButtons" destination="5sz-qC-qzo" collectionClass="NSMutableArray" id="tkL-q5-Mc3"/>
+                        <outletCollection property="letterButtons" destination="oKT-Mh-wGC" collectionClass="NSMutableArray" id="zQE-OO-POn"/>
+                        <outletCollection property="letterButtons" destination="7P1-ig-ubm" collectionClass="NSMutableArray" id="R0G-Dw-6YV"/>
+                        <outletCollection property="letterButtons" destination="scq-BA-Oyh" collectionClass="NSMutableArray" id="F87-Ni-Kbj"/>
+                        <outletCollection property="letterButtons" destination="1jE-pJ-L2y" collectionClass="NSMutableArray" id="bT1-s6-w2x"/>
+                        <outletCollection property="letterLabels" destination="gms-9M-yEa" collectionClass="NSMutableArray" id="v3L-Tk-rbg"/>
+                        <outletCollection property="letterLabels" destination="C68-DD-L49" collectionClass="NSMutableArray" id="hvi-hz-Iih"/>
+                        <outletCollection property="letterLabels" destination="sHS-PF-Zll" collectionClass="NSMutableArray" id="jfq-Sd-ZzM"/>
+                        <outletCollection property="letterLabels" destination="I2j-Gd-K56" collectionClass="NSMutableArray" id="W35-s0-N5V"/>
+                        <outletCollection property="letterLabels" destination="Jxd-ht-1uW" collectionClass="NSMutableArray" id="h73-EB-7i7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agh-MW-Q2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Y3e-Lc-ODU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1800.0000000000002" y="75.669642857142847"/>
         </scene>
