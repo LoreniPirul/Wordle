@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var listOfWords = ["IRATE", "PIOUS", "CLOGS", "CLOTH", "OXIDE", "VOICE", "CADEN", "ISAAC", "LOREN", "FRANK", "COlIN", "ELIJA"]
+    var listOfWords = ["IRATE", "PIOUS", "CLOGS", "CLOTH", "OXIDE", "VOICE", "CADEN", "ISAAC", "HAIRY", "FRANK", "COlIN", "ELIJA", "ZESTY"]
     let rowOfWords = 6
     var currentAttemptRow = 0
     let currentLabelNumber = 0
@@ -35,7 +35,6 @@ class ViewController: UIViewController {
         let labelDictionaryRowOne: [UILabel: Int] = [letterLabel1: 0, letterLabel2: 1, letterLabel3: 2, letterLabel4: 3, letterLabel5: 4 ]
 
         let letterString = sender.title(for: .normal)
-        let currentLabelPressed = labelDictionaryRowOne[key: index]
         
         index += 1
     }
