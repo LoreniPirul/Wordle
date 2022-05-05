@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+//    var currentGuesedLetter =
+    
+    
     var listOfWords = ["IRATE", "PIOUS", "CLOGS", "CLOTH", "OXIDE", "VOICE", "CADEN", "ISAAC", "BRAIN", "FRANK", "COlIN", "ELIJA", "ZESTY"]
     let rowOfWords = 6
     var currentAttemptRow = 0
@@ -57,15 +60,22 @@ class ViewController: UIViewController {
     var index = 0
 
     @IBAction func letterButtonPressed(_ sender: UIButton) {
-        words(string: sender.title(for: .normal))
-        index += 1
+        if indexCheck(letterButtons: sender) {
+            words(string: sender.title(for: .normal))
+            index += 1
+            print(index)
+        }
     }
     
     @IBAction func backspaceButtonPressed(_ sender: Any) {
         index -= 1
         words(string: "")
     }
-
+    @IBAction func enterButtonPressed(letterButtons: UIButton!) {
+        index += 1
+        letterButtons.isUserInteractionEnabled = true
+    }
+    
     
     func words(string: String?) {
         
@@ -78,65 +88,75 @@ class ViewController: UIViewController {
         } else if index == 3 {
             letterLabel4.text = string
         } else if index == 4 {
-        letterLabel5.text = string
-        }
-        else if index == 5 {
-        letterLabel6.text = string
+            letterLabel5.text = string
+        } else if index == 5 {
+            letterLabel6.text = string
         } else if index == 6 {
-        letterLabel7.text = string
-    } else if index == 7 {
-        letterLabel8.text = string
-    } else if index == 8 {
-        letterLabel9.text = string
+            letterLabel7.text = string
+        } else if index == 7 {
+            letterLabel8.text = string
+        } else if index == 8 {
+            letterLabel9.text = string
+        } else if index == 9 {
+            letterLabel10.text = string
+        } else if index == 10 {
+            letterLabel11.text = string
+        } else if index == 11 {
+            letterLabel12.text = string
+        } else if index == 12 {
+            letterLabel13.text = string
+        } else if index == 13 {
+            letterLabel14.text = string
+        } else if index == 14 {
+            letterLabel15.text = string
+        } else if index == 15 {
+            letterLabel16.text = string
+        } else if index == 16 {
+            letterLabel17.text = string
+        } else if index == 17 {
+            letterLabel18.text = string
+        } else if index == 18 {
+            letterLabel19.text = string
+        } else if index == 19 {
+            letterLabel20.text = string
+        } else if index == 20 {
+            letterLabel21.text = string
+        } else if index == 21 {
+            letterLabel22.text = string
+        } else if index == 22 {
+            letterLabel23.text = string
+        } else if index == 23 {
+            letterLabel24.text = string
+        } else if index == 24 {
+            letterLabel25.text = string
+        } else if index == 25 {
+            letterLabel26.text = string
+        } else if index == 26 {
+            letterLabel27.text = string
+        } else if index == 27 {
+            letterLabel28.text = string
+        } else if index == 28 {
+            letterLabel29.text = string
+        } else if index == 29 {
+            letterLabel30.text = string
+        } else if index == 31 {
+            letterLabel3.text = string }
+        }
     
-    } else if index == 9 {
-        letterLabel10.text = string
-    } else if index == 10 {
-        letterLabel11.text = string
-    } else if index == 11 {
-        letterLabel12.text = string
-    } else if index == 12 {
-    letterLabel13.text = string
-    } else if index == 13 {
-        letterLabel14.text = string
-    } else if index == 14 {
-        letterLabel15.text = string
-    } else if index == 15 {
-        letterLabel16.text = string
-    } else if index == 16 {
-    letterLabel17.text = string
-    }
-     else if index == 17 {
-        letterLabel18.text = string
-    } else if index == 18 {
-        letterLabel19.text = string
-    } else if index == 19 {
-        letterLabel20.text = string
-    } else if index == 20 {
-    letterLabel21.text = string
-    } else if index == 21 {
-        letterLabel22.text = string
-    } else if index == 22 {
-        letterLabel23.text = string
-    } else if index == 23 {
-        letterLabel24.text = string
-    } else if index == 24 {
-    letterLabel25.text = string
-    } else if index == 25 {
-        letterLabel26.text = string
-    } else if index == 26 {
-        letterLabel27.text = string
-    } else if index == 27 {
-        letterLabel28.text = string
-    } else if index == 28 {
-    letterLabel29.text = string
-    } else if index == 29 {
-        letterLabel30.text = string
-    } else if index == 31 {
-        letterLabel3.text = string
-    
-    }
-    
+    func indexCheck(letterButtons: UIButton!) -> Bool {
+        if index == 5 {
+            letterButtons.isUserInteractionEnabled = false
+        } else if index == 10 {
+            letterButtons.isUserInteractionEnabled = false
+        } else if index == 15 {
+            letterButtons.isUserInteractionEnabled = false
+        } else if index == 20 {
+            letterButtons.isUserInteractionEnabled = false
+        } else if index == 25 {
+            letterButtons.isUserInteractionEnabled = false
+        } else if index == 30 {
+            letterButtons.isUserInteractionEnabled = false
+        }
+        return letterButtons.isUserInteractionEnabled
     }
 }
-

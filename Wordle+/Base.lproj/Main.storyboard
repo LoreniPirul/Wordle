@@ -96,7 +96,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Q"/>
                                 <connections>
-                                    <action selector="letterButtonPressed:" destination="RA5-em-dei" eventType="touchUpInside" id="2qy-TQ-gJd"/>
+                                    <action selector="letterButtonPressed:" destination="RA5-em-dei" eventType="touchUpInside" id="qWU-DZ-xBK"/>
                                     <action selector="letterButtons:" destination="Y3e-Lc-ODU" eventType="touchUpInside" id="X6e-zu-33S"/>
                                 </connections>
                             </button>
@@ -304,6 +304,9 @@
                                 <rect key="frame" x="25" y="747" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enter"/>
+                                <connections>
+                                    <action selector="enterButtonPressed:" destination="RA5-em-dei" eventType="touchUpInside" id="lpB-YT-zxK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L14-Yo-wPc">
                                 <rect key="frame" x="345" y="747" width="32" height="30"/>
@@ -598,7 +601,6 @@
                         <outlet property="letterLabel7" destination="dQa-HG-4wJ" id="S1Y-jW-bHg"/>
                         <outlet property="letterLabel8" destination="A8n-SF-IW9" id="dyY-fQ-x75"/>
                         <outlet property="letterLabel9" destination="g4Y-sh-FXW" id="WvE-bP-5DE"/>
-                        <outletCollection property="letterButtons" destination="sfV-JH-h09" collectionClass="NSMutableArray" id="dfH-qi-Lyk"/>
                         <outletCollection property="letterButtons" destination="XPp-wL-UWy" collectionClass="NSMutableArray" id="SRD-97-DCu"/>
                         <outletCollection property="letterButtons" destination="ZdF-KF-lby" collectionClass="NSMutableArray" id="wXa-xa-C7L"/>
                         <outletCollection property="letterButtons" destination="s0b-Au-sgn" collectionClass="NSMutableArray" id="YEq-11-535"/>
