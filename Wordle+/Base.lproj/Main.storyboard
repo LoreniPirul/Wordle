@@ -305,7 +305,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enter"/>
                                 <connections>
-                                    <action selector="enterButtonPressed:" destination="RA5-em-dei" eventType="touchUpInside" id="lpB-YT-zxK"/>
+                                    <action selector="enterButtonPressedWithLetterButtons:" destination="RA5-em-dei" eventType="touchUpInside" id="y5Y-Q7-v73"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L14-Yo-wPc">

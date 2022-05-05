@@ -13,12 +13,7 @@ class ViewController: UIViewController {
     
     
     var listOfWords = ["IRATE", "PIOUS", "CLOGS", "CLOTH", "OXIDE", "VOICE", "CADEN", "ISAAC", "BRAIN", "FRANK", "COlIN", "ELIJA", "ZESTY"]
-    let rowOfWords = 6
-    var currentAttemptRow = 0
-    let currentLabelNumber = 0
-    
-    
-    
+
     @IBOutlet var letterButtons: [UIButton]!
     
     @IBOutlet var letterLabel1: UILabel!
@@ -60,7 +55,7 @@ class ViewController: UIViewController {
     var index = 0
 
     @IBAction func letterButtonPressed(_ sender: UIButton) {
-        if indexCheck(letterButtons: sender) {
+        if indexCheck(letterButtons: sender) == true {
             words(string: sender.title(for: .normal))
             index += 1
             print(index)
@@ -72,8 +67,10 @@ class ViewController: UIViewController {
         words(string: "")
     }
     @IBAction func enterButtonPressed(letterButtons: UIButton!) {
-        index += 1
-        letterButtons.isUserInteractionEnabled = true
+        if index == 5 || index == 10 || index == 15 || index == 20 || index == 25 || index == 30 {
+            index += 1
+            letterButtons.isUserInteractionEnabled = true
+        }
     }
     
     
