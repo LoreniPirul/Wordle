@@ -14,6 +14,8 @@ enum GameStateAfter {
 }
 
 enum GameStateDuring {
+    case fullCorrectWord
+    case fullIncorrectWord
     case incorrectLetter
     case correctLetter
     case NRPForLetter
