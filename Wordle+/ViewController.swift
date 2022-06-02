@@ -50,6 +50,7 @@ class ViewController: UIViewController {
     @IBOutlet var letterLabel30: UILabel!
     
     @IBOutlet var backspace: UIButton!
+    @IBOutlet weak var enter: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -158,4 +159,9 @@ class ViewController: UIViewController {
         }
         return letterButton.isUserInteractionEnabled
     }
+    
+    func letterCheck() {
+        if enter
+    }
 }
+

@@ -571,6 +571,7 @@
                     <navigationItem key="navigationItem" id="iSO-RQ-YdQ"/>
                     <connections>
                         <outlet property="backspace" destination="L14-Yo-wPc" id="iM7-CK-wvd"/>
+                        <outlet property="enter" destination="j7L-3M-v6d" id="KEg-7B-iIa"/>
                         <outlet property="letterLabel1" destination="gms-9M-yEa" id="XAl-c9-Xlt"/>
                         <outlet property="letterLabel10" destination="dTg-qc-vwB" id="9us-OG-KvJ"/>
                         <outlet property="letterLabel11" destination="9mU-ix-qNP" id="bQj-t0-9fP"/>
