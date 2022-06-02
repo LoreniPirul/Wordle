@@ -219,6 +219,32 @@ class ViewController: UIViewController {
                 } else {
                     //Grey
                 }
+                if gletterFour == String(wLetterOne){
+                    //Turns Background  Yellow
+                } else if gletterFour == String(wLetterTwo) {
+                    //Turns Background Yellow
+                } else if gletterFour == String(wLetterThree) {
+                    //Turns Background Yellow
+                } else if gletterFour == String(wLetterFour) {
+                    //Green
+                } else if gletterFour == String(wLetterFive) {
+                    //Yellow
+                } else {
+                    //Grey
+                if gletterFive == String(wLetterOne){
+                    //Turns Background  Yellow
+                } else if gletterFive == String(wLetterTwo) {
+                    //Turns Background Yellow
+                } else if gletterFive == String(wLetterThree) {
+                    //Turns Background Yellow
+                } else if gletterFive == String(wLetterFour) {
+                    //Yellow
+                } else if gletterFive == String(wLetterFive) {
+                    //Green
+                } else {
+                    //Grey
+                }
+                }
             }
         }
     }
