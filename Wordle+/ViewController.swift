@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     var listOfWords = ["IRATE", "PIOUS", "CLOGS", "CLOTH", "OXIDE", "VOICE", "CADEN", "ISAAC", "BRAIN", "FRANK", "COlIN", "ELIJA", "ZESTY"]
     let testWord = "IRATE"
-    var currentWord = "CRANE"
+    var currentWord = "C.R.A.N.E"
 
     @IBOutlet var letterButtons: [UIButton]!
     
@@ -77,6 +77,7 @@ class ViewController: UIViewController {
     @IBAction func enterButtonPressed(_ sender: UIButton?) {
         if index == 5 || index == 11 || index == 17 || index == 23 || index == 29 || index == 35 {
             //run letter check
+            letterCheck()
             index += 1
             letterButtons.forEach { $0.isUserInteractionEnabled = true }
         }
@@ -161,8 +162,16 @@ class ViewController: UIViewController {
     }
     
     func letterCheck() {
-        if enter.isTouchInside == true {
-            if index == 4{
+        let letters = currentWord.split(separator: ".")
+        let wLetterOne = letters[0]
+        let wLetterTwo = letters[1]
+        let wLetterThree = letters[2]
+        let wLetterFour = letters[3]
+        let wLetterFive = letters[4]
+        
+//        if enter.isTouchInside == true {
+            if index == 5{
+                print("Bitch")
                 let gletterOne = letterLabel1.text
                 let gletterTwo = letterLabel2.text
                 let gletterThree = letterLabel3.text
@@ -171,12 +180,69 @@ class ViewController: UIViewController {
                 
                 let letters = currentWord.split(separator: ".")
                 print(letters)
-
-                let wLetterOne = letters[0]
-                let wLetterTwo = letters[1]
-                let wLetterThree = letters[2]
-                let wLetterFour = letters[3]
-                let wLetterFive = letters[4]
+                
+                if gletterOne == String(wLetterOne){
+                    letterLabel1.backgroundColor = UIColor(red: 0, green: 255, blue: 0, alpha: 1)
+                } else if gletterOne == String(wLetterTwo) {
+                    //Turns Background Yellow
+                } else if gletterOne == String(wLetterThree) {
+                    //Yellow
+                } else if gletterOne == String(wLetterFour) {
+                    //Yellow
+                } else if gletterOne == String(wLetterFive) {
+                    //Yellow
+                } else if gletterTwo == String(wLetterOne){
+                    //Turns Background  Yellow
+                } else if gletterTwo == String(wLetterTwo) {
+                    //Turns Background Green
+                } else if gletterTwo == String(wLetterThree) {
+                    //Yellow
+                } else if gletterTwo == String(wLetterFour) {
+                    //Yellow
+                } else if gletterTwo == String(wLetterFive) {
+                    //Yellow
+                } else if gletterThree == String(wLetterOne){
+                    //Turns Background  Yellow
+                } else if gletterThree == String(wLetterTwo) {
+                    //Turns Background Yellow
+                } else if gletterThree == String(wLetterThree) {
+                    //Turns Background Green
+                } else if gletterThree == String(wLetterFour) {
+                    //Yellow
+                } else if gletterThree == String(wLetterFive) {
+                    //Yellow
+                } else if gletterFour == String(wLetterOne){
+                    //Turns Background  Yellow
+                } else if gletterFour == String(wLetterTwo) {
+                    //Turns Background Yellow
+                } else if gletterFour == String(wLetterThree) {
+                    //Turns Background Yellow
+                } else if gletterFour == String(wLetterFour) {
+                    //Green
+                } else if gletterFour == String(wLetterFive) {
+                    //Yellow
+                } else if gletterFive == String(wLetterOne){
+                    //Turns Background  Yellow
+                } else if gletterFive == String(wLetterTwo) {
+                    //Turns Background Yellow
+                } else if gletterFive == String(wLetterThree) {
+                    //Turns Background Yellow
+                } else if gletterFive == String(wLetterFour) {
+                    //Yellow
+                } else if gletterFive == String(wLetterFive) {
+                    //Green
+                } else {
+                    //Grey
+                }
+            } else if index == 11 {
+                let gletterOne = letterLabel6.text
+                let gletterTwo = letterLabel7.text
+                let gletterThree = letterLabel8.text
+                let gletterFour = letterLabel9.text
+                let gletterFive = letterLabel10.text
+                
+                let letters = currentWord.split(separator: ".")
+                print(letters)
                 
                 if gletterOne == String(wLetterOne){
                     //Turns Background  green
@@ -219,6 +285,7 @@ class ViewController: UIViewController {
                 } else {
                     //Grey
                 }
+                
                 if gletterFour == String(wLetterOne){
                     //Turns Background  Yellow
                 } else if gletterFour == String(wLetterTwo) {
@@ -231,6 +298,8 @@ class ViewController: UIViewController {
                     //Yellow
                 } else {
                     //Grey
+                }
+                
                 if gletterFive == String(wLetterOne){
                     //Turns Background  Yellow
                 } else if gletterFive == String(wLetterTwo) {
@@ -244,8 +313,7 @@ class ViewController: UIViewController {
                 } else {
                     //Grey
                 }
-                }
-            }
+//            }
         }
     }
 }
