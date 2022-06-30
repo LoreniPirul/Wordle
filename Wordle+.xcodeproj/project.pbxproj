@@ -13,7 +13,6 @@
 		6EC324FB28088E550038E830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC324F928088E550038E830 /* Main.storyboard */; };
 		6EC324FD28088E560038E830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EC324FC28088E560038E830 /* Assets.xcassets */; };
 		6EC3250028088E560038E830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC324FE28088E560038E830 /* LaunchScreen.storyboard */; };
-		6EF8380B28243F09007E84CE /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF8380A28243F09007E84CE /* GameState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		6EC324FC28088E560038E830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EC324FF28088E560038E830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EC3250128088E560038E830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6EF8380A28243F09007E84CE /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +59,6 @@
 				6EC324F328088E550038E830 /* AppDelegate.swift */,
 				6EC324F528088E550038E830 /* SceneDelegate.swift */,
 				6EC324F728088E550038E830 /* ViewController.swift */,
-				6EF8380A28243F09007E84CE /* GameState.swift */,
 				6EC324F928088E550038E830 /* Main.storyboard */,
 				6EC324FC28088E560038E830 /* Assets.xcassets */,
 				6EC324FE28088E560038E830 /* LaunchScreen.storyboard */,
@@ -141,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EC324F828088E550038E830 /* ViewController.swift in Sources */,
-				6EF8380B28243F09007E84CE /* GameState.swift in Sources */,
 				6EC324F428088E550038E830 /* AppDelegate.swift in Sources */,
 				6EC324F628088E550038E830 /* SceneDelegate.swift in Sources */,
 			);
