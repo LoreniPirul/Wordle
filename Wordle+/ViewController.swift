@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var listOfWords = ["I.R.A.T.E", "P.I.O.U.S", "C.L.O.G.S", "C.L.O.T.H", "O.X.I.D.E", "V.O.I.C.E", "C.A.D.E.N", "I.S.A.A.C", "B.R.A.I.N", "F.R.A.N.K", "C.O.l.I.N", "E.L.I.J.A", "Z.E.S.T.Y"]
+    var listOfWords = ["I.R.A.T.E", "P.I.O.U.S", "C.L.O.G.S", "C.L.O.T.H", "O.X.I.D.E", "V.O.I.C.E", "C.A.D.E.N", "I.S.A.A.C", "B.R.A.I.N", "F.R.A.N.K", "C.O.l.I.N", "E.L.I.J.A", "Z.E.S.T.Y", "C.R.A.N.E"]
     var currentWord = "C.R.A.N.E"
 
     @IBOutlet var letterButtons: [UIButton]!
@@ -57,6 +57,7 @@ class ViewController: UIViewController {
         guard index < 35 else {
             return
         }
+        fixxingBackspace()
         if indexCheck(letterButton: sender) == true {
             words(string: sender.title(for: .normal))
             index += 1
@@ -64,14 +65,38 @@ class ViewController: UIViewController {
         }
     }
     
+    func fixxingBackspace () {
+        if index == 0 || index == 6 || index == 12 || index == 18 || index == 24 || index == 30 {
+            backspace.isUserInteractionEnabled = false
+        }
+        if index == 1 || index == 7  || index == 13 || index == 19 || index == 25 || index == 31 {
+            backspace.isUserInteractionEnabled = true
+        }
+    }
+    
     @IBAction func backspaceButtonPressed(_ sender: Any) {
+        if index == 0 {
+            index += 1
+        }
         index -= 1
+        fixxingBackspace()
+        print(index)
         words(string: "")
     }
     
     @IBAction func enterButtonPressed(_ sender: UIButton?) {
         if index == 5 || index == 11 || index == 17 || index == 23 || index == 29 || index == 35 {
-            isWordReal()
+//            var result = isWordReal()
+//            while result == 1||result == 0 {
+//                if result == 1 {
+//                    backspace.isUserInteractionEnabled = true
+//                    result += 1
+//                    continue
+//                } else if result == 0{
+//                    print("Enter Function has Stopped")
+//                    break
+//                }
+//            }
             letterCheck()
             winCheck()
             loseCheck()
@@ -79,6 +104,7 @@ class ViewController: UIViewController {
             letterButtons.forEach { $0.isUserInteractionEnabled = true }
         }
     }
+
     
     func words(string: String?) {
         if index == 0 {
@@ -736,24 +762,35 @@ class ViewController: UIViewController {
         enter.isUserInteractionEnabled = false
     }
     
-    func isWordReal(){
-        let letters = currentWord.split(separator: ".")
-        let word: String = String(letters[0] + letters[1] + letters[2] + letters[3] + letters[4])
-        let result = isReal(word: word)
-        if result == true {
-            print("Its all good.")
-        } else {
-            winLabel.text = "This is not a real word"
-            enter.isUserInteractionEnabled = false
-        }
-    }
+    
+    func
     
     
-    func isReal(word: String) -> Bool  {
-        let checker = UITextChecker()
-        let range = NSRange(location: 0, length: word.utf16.count)
-        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-        
-        return misspelledRange.location == NSNotFound
-    }
+    
+//    func isWordReal() -> Int{
+//        let letters = currentWord.split(separator: ".")
+//        let word: String = String(letters[0] + letters[1] + letters[2] + letters[3] + letters[4])
+//        let result = isReal(word: word)
+//        if result == false {
+//            print("Its all good.")
+//            return 1
+//        } else if result == true {
+//            realWordLabel.text = "This is not a real word"
+//            enter.isUserInteractionEnabled = false
+//            return 0
+//        } else {
+//            print("Error in isRealWorld")
+//            return 10000
+//        }
+//    }
+    
+    @IBOutlet weak var realWordLabel: UILabel!
+    
+//    func isReal(word: String) -> Bool  {
+//        let checker = UITextChecker()
+//        let range = NSRange(location: 0, length: word.utf16.count)
+//        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
+//
+//        return misspelledRange.location == NSNotFound
+//    }
 }

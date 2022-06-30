@@ -656,6 +656,13 @@
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIc-jv-BMw">
+                                <rect key="frame" x="43" y="181" width="328" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SDV-6e-fbL"/>
                         <color key="backgroundColor" red="0.10944234913793105" green="0.10944234913793105" blue="0.10944234913793105" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -694,6 +701,7 @@
                         <outlet property="letterLabel7" destination="dQa-HG-4wJ" id="S1Y-jW-bHg"/>
                         <outlet property="letterLabel8" destination="A8n-SF-IW9" id="dyY-fQ-x75"/>
                         <outlet property="letterLabel9" destination="g4Y-sh-FXW" id="WvE-bP-5DE"/>
+                        <outlet property="realWordLabel" destination="nIc-jv-BMw" id="fkH-Q1-9E0"/>
                         <outlet property="winLabel" destination="Dqi-Pg-CuE" id="Lu4-jB-IXs"/>
                         <outletCollection property="letterButtons" destination="XPp-wL-UWy" collectionClass="NSMutableArray" id="SRD-97-DCu"/>
                         <outletCollection property="letterButtons" destination="ZdF-KF-lby" collectionClass="NSMutableArray" id="wXa-xa-C7L"/>
@@ -720,6 +728,7 @@
                         <outletCollection property="letterButtons" destination="7P1-ig-ubm" collectionClass="NSMutableArray" id="R0G-Dw-6YV"/>
                         <outletCollection property="letterButtons" destination="scq-BA-Oyh" collectionClass="NSMutableArray" id="F87-Ni-Kbj"/>
                         <outletCollection property="letterButtons" destination="1jE-pJ-L2y" collectionClass="NSMutableArray" id="bT1-s6-w2x"/>
+                        <outletCollection property="letterButtons" destination="sfV-JH-h09" collectionClass="NSMutableArray" id="o6g-iW-7uR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agh-MW-Q2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
