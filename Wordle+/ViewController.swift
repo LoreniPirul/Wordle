@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var listOfWords = ["I.R.A.T.E", "P.I.O.U.S", "C.L.O.G.S", "C.L.O.T.H", "O.X.I.D.E", "V.O.I.C.E", "C.A.D.E.N", "I.S.A.A.C", "B.R.A.I.N", "F.R.A.N.K", "C.O.l.I.N", "E.L.I.J.A", "Z.E.S.T.Y", "C.R.A.N.E"]
-    var currentWord = "C.R.A.N.E"
+    var currentWord = "S.O.A.R.E"
 
     @IBOutlet var letterButtons: [UIButton]!
     
@@ -57,6 +57,8 @@ class ViewController: UIViewController {
         guard index < 35 else {
             return
         }
+        winLabel.text = ""
+        realWordLabel.text = ""
         fixxingBackspace()
         if indexCheck(letterButton: sender) == true {
             words(string: sender.title(for: .normal))
@@ -97,6 +99,7 @@ class ViewController: UIViewController {
 //                    break
 //                }
 //            }
+            doubleLetterWarining()
             letterCheck()
             winCheck()
             loseCheck()
@@ -202,6 +205,7 @@ class ViewController: UIViewController {
             
             if gletterOne == String(wLetterOne){
                 letterLabel1.backgroundColor = UIColor.green
+                
             } else if gletterOne == String(wLetterTwo) {
                 letterLabel1.backgroundColor = UIColor.yellow
             } else if gletterOne == String(wLetterThree) {
@@ -763,8 +767,44 @@ class ViewController: UIViewController {
     }
     
     
-    func
-    
+    func doubleLetterWarining() {
+        if index == 5 {
+            if letterLabel1.text == letterLabel2.text || letterLabel1.text == letterLabel3.text || letterLabel1.text == letterLabel4.text || letterLabel1.text == letterLabel5.text || letterLabel2.text == letterLabel3.text || letterLabel2.text == letterLabel4.text || letterLabel2.text == letterLabel5.text || letterLabel3.text == letterLabel4.text || letterLabel3.text == letterLabel5.text || letterLabel4.text == letterLabel5.text {
+                    realWordLabel.text = "Two letters are the same in the word, its a waste :|"
+                    print("did it")
+            }
+        }
+        if index == 11 {
+            if letterLabel6.text == letterLabel7.text || letterLabel6.text == letterLabel8.text || letterLabel6.text == letterLabel9.text || letterLabel6.text == letterLabel10.text || letterLabel7.text == letterLabel8.text || letterLabel7.text == letterLabel9.text || letterLabel7.text == letterLabel10.text || letterLabel8.text == letterLabel9.text || letterLabel8.text == letterLabel10.text || letterLabel9.text == letterLabel10.text {
+                    realWordLabel.text = "Two letters are the same in the word, its a waste :|"
+                    print("did it")
+            }
+        }
+        if index == 17 {
+            if letterLabel11.text == letterLabel12.text || letterLabel11.text == letterLabel13.text || letterLabel11.text == letterLabel14.text || letterLabel11.text == letterLabel15.text || letterLabel12.text == letterLabel13.text || letterLabel12.text == letterLabel14.text || letterLabel12.text == letterLabel15.text || letterLabel13.text == letterLabel14.text || letterLabel13.text == letterLabel15.text || letterLabel14.text == letterLabel15.text {
+                    realWordLabel.text = "Two letters are the same in the word, its a waste :|"
+                    print("did it")
+            }
+        }
+        if index == 23 {
+            if letterLabel16.text == letterLabel17.text || letterLabel16.text == letterLabel18.text || letterLabel16.text == letterLabel19.text || letterLabel16.text == letterLabel20.text || letterLabel17.text == letterLabel18.text || letterLabel17.text == letterLabel19.text || letterLabel17.text == letterLabel20.text || letterLabel18.text == letterLabel19.text || letterLabel18.text == letterLabel20.text || letterLabel19.text == letterLabel20.text {
+                    realWordLabel.text = "Two letters are the same in the word, its a waste :|"
+                    print("did it")
+            }
+        }
+        if index == 29 {
+            if letterLabel21.text == letterLabel22.text || letterLabel21.text == letterLabel23.text || letterLabel21.text == letterLabel24.text || letterLabel21.text == letterLabel25.text || letterLabel22.text == letterLabel23.text || letterLabel22.text == letterLabel24.text || letterLabel22.text == letterLabel25.text || letterLabel23.text == letterLabel24.text || letterLabel23.text == letterLabel25.text || letterLabel24.text == letterLabel25.text {
+                    realWordLabel.text = "Two letters are the same in the word, its a waste :|"
+                    print("did it")
+            }
+        }
+        if index == 35 {
+            if letterLabel26.text == letterLabel27.text || letterLabel26.text == letterLabel28.text || letterLabel26.text == letterLabel29.text || letterLabel26.text == letterLabel30.text || letterLabel27.text == letterLabel28.text || letterLabel27.text == letterLabel29.text || letterLabel27.text == letterLabel30.text || letterLabel28.text == letterLabel29.text || letterLabel28.text == letterLabel30.text || letterLabel29.text == letterLabel30.text {
+                    realWordLabel.text = "Two letters are the same in the word, its a waste :|"
+                    print("did it")
+            }
+        }
+    }
     
     
 //    func isWordReal() -> Int{
